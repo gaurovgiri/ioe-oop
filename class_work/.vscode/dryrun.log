@@ -1,0 +1,6 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/home/gaurav/Documents/KEC/2-1 sem/OOP/class_work'
+make: Leaving directory '/home/gaurav/Documents/KEC/2-1 sem/OOP/class_work'
+ 
+make: *** No targets specified and no makefile found.  Stop.
+
