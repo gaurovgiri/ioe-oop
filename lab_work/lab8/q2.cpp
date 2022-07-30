@@ -13,6 +13,16 @@ T absoluteValue(T arg)
 int main()
 {
     double a;
-    cout << "Enter a number: "; cin >> a;
-    cout << "Absolute Value: " << absoluteValue(a) << endl; 
+    cout << "Enter a double: "; cin >> a;
+    cout << "Absolute Value: " << absoluteValue(a) << endl;
+    
+      int b;
+    cout << "Enter a int: "; cin >> b;
+    cout << "Absolute Value: " << absoluteValue(b) << endl; 
+    
+      float c;
+    cout << "Enter a float: "; cin >> c;
+   cout << "Absolute Value: " << absoluteValue(c) << endl;
+   
+   return 0;	
 }

@@ -33,7 +33,7 @@ int main()
     Student stu, stu1;
     char option, name[25];
     int id, roll_no;
-    ofstream out("Student.dat", ios::binary|ios::app);
+    ofstream out("Student.txt", ios::binary|ios::app);
 
     cout << "Writing Data: " << endl;
     while (option != 'n')
@@ -58,7 +58,7 @@ int main()
     cout << endl;
     out.close();
     cout << "Reading From File: " << endl;
-    ifstream inFile("Student.dat", ios::binary);
+    ifstream inFile("Student.txt", ios::binary);
 
     while (true)
     {
