@@ -33,7 +33,7 @@ int main()
     Student stu, stu1;
     char option, name[25];
     int id, roll_no;
-    ofstream out("Student.txt", ios::binary|ios::app);
+    ofstream out("Student.dat", ios::binary | ios::trunc);
 
     cout << "Writing Data: " << endl;
     while (option != 'n')
@@ -48,7 +48,6 @@ int main()
         stu.getData(name, id, roll_no);
 
         out.write(reinterpret_cast<char *>(&stu), sizeof(stu));
-        // out.seekp(sizeof(stu));
 
         cout << endl
              << "Do you want to Enter again? (y/n) ";
@@ -58,21 +57,24 @@ int main()
     cout << endl;
     out.close();
     cout << "Reading From File: " << endl;
-    ifstream inFile("Student.txt", ios::binary);
+    ifstream inFile("Student.dat", ios::binary | ios::in);
 
-    while (true)
+    /*    inFile.read(reinterpret_cast<char *>(&stu1), sizeof(stu1));
+
+        while (!inFile.eof())
+        {
+            stu1.showData();
+            inFile.read(reinterpret_cast<char *>(&stu1), sizeof(stu1));
+        }
+    */
+    // while approach
+
+
+    for (inFile.read(reinterpret_cast<char *>(&stu1), sizeof(stu1)); !inFile.eof(); inFile.read(reinterpret_cast<char *>(&stu1), sizeof(stu1)))
     {
-
-        inFile.read(reinterpret_cast<char *>(&stu1), sizeof(stu1));
-        if (inFile.eof())
-        {
-            break;
-        }
-        else if (!inFile.eof())
-        {
         stu1.showData();
-            
-        }
     }
+
+    inFile.close();
     return 0;
 }
