@@ -30,3 +30,5 @@ relative/path/to/dir/filename.extension
 # Ignore a file without extension
 relative/path/to/dir/anotherfile
 
+# Ignore json
+!*.json
