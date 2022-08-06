@@ -58,7 +58,6 @@ public:
             cout << subjects[i] << ": " << imarks[i] << endl;
         }
         cout << "Total: " << itotal << endl;
-
     }
 };
 
@@ -86,8 +85,7 @@ public:
         {
             cout << subjects[i] << ": " << emarks[i] << endl;
         }
-            cout << "Total: " << etotal << endl;
-
+        cout << "Total: " << etotal << endl;
     }
 };
 
@@ -107,7 +105,6 @@ public:
 
     void showData()
     {
-        cout << "---------------------" << endl
         Student::showData();
         Internal_Exam::showData();
         External_Exam::showData();
