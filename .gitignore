@@ -32,3 +32,9 @@ relative/path/to/dir/anotherfile
 
 # Ignore json
 *.json
+
+# Ignore log
+*.log
+
+Programs/
+*/.vscode/
